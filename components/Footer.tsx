@@ -26,7 +26,7 @@ const ecosystemProjects = [
     id: "pythia",
     name: "Pythia AI",
     description: "Emergent Intelligence",
-    url: "https://pythia-ai.xyz",
+    url: "https://pythia-ai-web.vercel.app",
     color: "#8b5cf6",
   },
   {
@@ -41,7 +41,7 @@ const ecosystemProjects = [
     id: "spectrum",
     name: "Spectrum Galactic",
     description: "Global Connectivity",
-    url: "https://spectrumgalactic.xyz",
+    url: "https://spectrum-galactic.vercel.app",
     color: "#00d4ff",
   },
 ];
