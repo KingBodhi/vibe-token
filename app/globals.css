@@ -1,26 +1,284 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ============================================
+     SOVEREIGN STACK UNIFIED DESIGN TOKENS
+     ============================================ */
+
+  /* Alpha Protocol - Deep Blue (Protocol Foundation) */
+  --alpha-primary: #1e40af;
+  --alpha-accent: #3b82f6;
+  --alpha-light: #60a5fa;
+  --alpha-dark: #1e3a8a;
+
+  /* Omega Wireless - Electric Blue (Hardware Foundation) */
+  --omega-primary: #00aaff;
+  --omega-accent: #0088cc;
+  --omega-light: #4dc3ff;
+  --omega-dark: #006699;
+
+  /* PCG Dashboard - Emerald (Sovereign OS Interface) */
+  --pcg-primary: #10b981;
+  --pcg-accent: #059669;
+  --pcg-light: #34d399;
+  --pcg-dark: #047857;
+
+  /* Pythia AI - Purple (Emergent Intelligence) */
+  --pythia-primary: #8b5cf6;
+  --pythia-accent: #7c3aed;
+  --pythia-light: #a78bfa;
+  --pythia-dark: #6d28d9;
+
+  /* VIBE Token - Gold (Ecosystem Rewards) */
+  --vibe-primary: #f59e0b;
+  --vibe-accent: #d97706;
+  --vibe-light: #fbbf24;
+  --vibe-dark: #b45309;
+  /* Legacy aliases */
+  --vibe-orange: #F59E0B;
+  --vibe-green: #10B981;
+
+  /* Spectrum Galactic - Cyan (Global Connectivity) */
+  --spectrum-primary: #00d4ff;
+  --spectrum-accent: #0ea5e9;
+  --spectrum-light: #38bdf8;
+  --spectrum-dark: #0284c7;
+
+  /* Sovereign Stack Gold (Ecosystem Unity) */
+  --sovereign-gold: #C9A227;
+  --sovereign-gold-light: #E8D48A;
+  --sovereign-gold-dark: #8B7119;
+  /* Legacy aliases */
+  --gold: #C9A227;
+  --gold-light: #E8D48A;
+  --gold-dark: #8B7119;
+
+  /* Shared Neutral Palette */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #111118;
+  --bg-surface: #16161d;
+  --bg-card: #1a1a22;
+  --bg-elevated: #222230;
+  /* Legacy aliases */
+  --dark-bg: #0A0A0A;
+  --dark-surface: #111111;
+  --dark-card: #1A1A1A;
+  --dark-border: #2A2A2A;
+
+  --border-default: #2a2a35;
+  --border-subtle: #1f1f28;
+  --border-strong: #3a3a48;
+
+  /* Text Colors */
+  --text-primary: #FAFAFA;
+  --text-secondary: #A0A0A0;
+  --text-muted: #666666;
+  --text-subtle: #52525b;
+
+  /* Status Colors */
+  --status-success: #22c55e;
+  --status-success-bg: rgba(34, 197, 94, 0.1);
+  --status-warning: #eab308;
+  --status-warning-bg: rgba(234, 179, 8, 0.1);
+  --status-error: #ef4444;
+  --status-error-bg: rgba(239, 68, 68, 0.1);
+  --status-info: #3b82f6;
+  --status-info-bg: rgba(59, 130, 246, 0.1);
+
+  /* Legacy accent aliases */
+  --vibe-purple: #8B5CF6;
+  --vibe-blue: #3B82F6;
+
+  --background: #0A0A0A;
+  --foreground: #FAFAFA;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* Text gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-vibe {
+  background: linear-gradient(135deg, var(--vibe-light) 0%, var(--vibe-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-sovereign {
+  background: linear-gradient(135deg, var(--sovereign-gold-light) 0%, var(--sovereign-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
+}
+
+.glow-vibe {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
+}
+
+/* Token animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.token-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.token-spin {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #0A0A0A, #1A1A1A, #0A0A0A, #111111);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Pulse animation */
+.pulse-gold {
+  animation: pulse-gold 2s ease-in-out infinite;
+}
+
+@keyframes pulse-gold {
+  0%, 100% { opacity: 0.6; box-shadow: 0 0 10px rgba(201, 162, 39, 0.3); }
+  50% { opacity: 1; box-shadow: 0 0 30px rgba(201, 162, 39, 0.6); }
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--vibe-primary) 0%, var(--vibe-dark) 100%);
+  color: var(--dark-bg);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+}
+
+.btn-secondary {
+  border: 1px solid var(--vibe-primary);
+  color: var(--vibe-primary);
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--vibe-primary);
+  color: var(--dark-bg);
+}
+
+/* Card styles */
+.card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--vibe-primary);
+  transform: translateY(-4px);
+}
+
+/* Token coin style */
+.token-coin {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--dark-bg);
+  box-shadow:
+    0 0 30px rgba(201, 162, 39, 0.4),
+    inset 0 -5px 15px rgba(0, 0, 0, 0.3),
+    inset 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Status dot */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.online {
+  background: var(--status-success);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
 }
