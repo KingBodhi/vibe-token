@@ -34,7 +34,7 @@ export default function Home() {
 
           <p className="text-xl md:text-2xl text-[var(--text-secondary)] max-w-3xl mx-auto mb-8">
             VIBE is the native token of the Alpha Protocol Network.
-            Buy now at $0.001 and spend on the PowerClub Global Dashboard.
+            Buy now at $0.001 and spend on the Vibertas Dashboard.
             Full stack implementation in 30 days.
           </p>
 
@@ -42,8 +42,8 @@ export default function Home() {
             <Link href="/invest" className="btn-primary">
               Buy VIBE Now
             </Link>
-            <a href="https://powerclubglobal.com" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-              Spend on PCG Dashboard
+            <a href="https://vibertas-os.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+              Spend on Vibertas
             </a>
           </div>
         </div>
@@ -226,12 +226,12 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {[
-              { layer: "L6", name: "Spectrum Galactic", desc: "LEO Satellites" },
-              { layer: "L5", name: "VIBE Token", desc: "Economics Layer", active: true },
-              { layer: "L4", name: "Pythia AI", desc: "Intelligence Layer" },
-              { layer: "L3", name: "PCG Dashboard", desc: "User Interface" },
-              { layer: "L2", name: "Omega Hardware", desc: "Privacy Devices" },
-              { layer: "L1", name: "Alpha Protocol", desc: "Core Network" },
+              { layer: "L6", name: "Spectrum Galactic", desc: "LEO Satellites", color: "#8b5cf6" },
+              { layer: "L5", name: "Pythia AI", desc: "Intelligence Layer", color: "#3b82f6" },
+              { layer: "L4", name: "VIBE Token", desc: "Economics Layer", active: true, color: "#22c55e" },
+              { layer: "L3", name: "Vibertas", desc: "Sovereign OS", color: "#eab308" },
+              { layer: "L2", name: "Omega Wireless", desc: "Hardware Foundation", color: "#f97316" },
+              { layer: "L1", name: "Alpha Protocol", desc: "Protocol Foundation", color: "#dc2626" },
             ].map((item) => (
               <div
                 key={item.layer}
@@ -265,7 +265,7 @@ export default function Home() {
             Buy VIBE at <span className="text-gradient-gold">$0.001</span>
           </h2>
           <p className="text-[var(--text-secondary)] text-lg mb-8">
-            Get in early at the ground floor price. Spend your VIBE on the PowerClub Global Dashboard
+            Get in early at the ground floor price. Spend your VIBE on the Vibertas Dashboard
             for premium services. Full stack implementation launching in 30 days.
           </p>
           <div className="bg-[var(--dark-card)] border border-[var(--gold)] rounded-lg p-6 max-w-lg mx-auto mb-8 glow-gold">
@@ -282,7 +282,7 @@ export default function Home() {
             </div>
             <div className="mt-6 pt-4 border-t border-[var(--dark-border)]">
               <div className="text-sm text-[var(--text-secondary)]">
-                Spend on <a href="https://powerclubglobal.com" target="_blank" rel="noopener noreferrer" className="text-[var(--gold)] hover:underline">PowerClub Global Dashboard</a>
+                Spend on <a href="https://vibertas-os.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--gold)] hover:underline">Vibertas Dashboard</a>
               </div>
             </div>
           </div>
@@ -290,8 +290,8 @@ export default function Home() {
             <Link href="/invest" className="btn-primary">
               Buy VIBE Now
             </Link>
-            <a href="https://powerclubglobal.com" target="_blank" rel="noopener noreferrer" className="btn-secondary">
-              Visit PCG Dashboard
+            <a href="https://vibertas-os.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+              Visit Vibertas
             </a>
           </div>
         </div>
