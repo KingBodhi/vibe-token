@@ -24,17 +24,23 @@
   --vibertas-light: #fde047;
   --vibertas-dark: #ca8a04;
 
-  /* Pythia AI - Blue (Emergent Intelligence) */
-  --pythia-primary: #3b82f6;
-  --pythia-accent: #2563eb;
-  --pythia-light: #60a5fa;
-  --pythia-dark: #1d4ed8;
+  /* Pythia AI - Indigo (Emergent Intelligence) */
+  --pythia-primary: #6366f1;
+  --pythia-accent: #4f46e5;
+  --pythia-light: #818cf8;
+  --pythia-dark: #4338ca;
 
   /* VIBE Token - Green (Ecosystem Rewards) - PRIMARY */
   --vibe-primary: #22c55e;
   --vibe-accent: #16a34a;
   --vibe-light: #4ade80;
   --vibe-dark: #15803d;
+
+  /* VIBELAND - Blue (Sovereign Metaverse) */
+  --vibeland-primary: #3b82f6;
+  --vibeland-accent: #2563eb;
+  --vibeland-light: #60a5fa;
+  --vibeland-dark: #1d4ed8;
 
   /* Spectrum Galactic - Violet (Global Connectivity) */
   --spectrum-primary: #8b5cf6;
@@ -230,7 +236,7 @@ body {
 
 /* Rainbow gradient for Sovereign Stack */
 .text-gradient-rainbow {
-  background: linear-gradient(135deg, var(--alpha-primary) 0%, var(--omega-primary) 16%, var(--vibertas-primary) 33%, var(--pythia-primary) 50%, var(--vibe-primary) 66%, var(--spectrum-primary) 100%);
+  background: linear-gradient(135deg, var(--alpha-primary) 0%, var(--omega-primary) 16%, var(--vibertas-primary) 33%, var(--vibe-primary) 50%, var(--vibeland-primary) 66%, var(--spectrum-primary) 83%, var(--pythia-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

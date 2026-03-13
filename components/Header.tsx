@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
+  { label: "Presale", href: "/presale" },
   { label: "Tokenomics", href: "/tokenomics" },
   { label: "Earn & Spend", href: "/earn-spend" },
   { label: "Roadmap", href: "/roadmap" },
@@ -17,27 +18,24 @@ const ecosystemProjects = [
     name: "Alpha Protocol",
     shortName: "Alpha",
     description: "Protocol Foundation - Enabling P2P Connections",
-    url: "https://alpha-protocol-web.vercel.app",
+    url: "https://alphaprotocol.network",
     color: "#dc2626",
-    layer: "Layer 0",
   },
   {
     id: "omega",
     name: "Omega Wireless",
     shortName: "Omega",
     description: "Hardware Foundation - Physical Access Points",
-    url: "https://omega-wireless.vercel.app",
+    url: "https://omegawireless.xyz",
     color: "#f97316",
-    layer: "Layer 1",
   },
   {
     id: "vibertas",
     name: "Vibertas",
     shortName: "Viber",
     description: "Sovereign OS - Your Interface to the Mesh",
-    url: "https://vibertas-os.vercel.app",
+    url: "https://vibertas.com",
     color: "#eab308",
-    layer: "OS Layer",
   },
   {
     id: "vibe",
@@ -46,25 +44,30 @@ const ecosystemProjects = [
     description: "Ecosystem Rewards - Value for Contributors",
     url: "#",
     color: "#22c55e",
-    layer: "Economics",
   },
   {
-    id: "pythia",
-    name: "Pythia AI",
-    shortName: "Pythia",
-    description: "Emergent AI - Powered by the Ecosystem",
-    url: "https://pythia-ai.vercel.app",
+    id: "vibeland",
+    name: "VIBELAND",
+    shortName: "VIBELAND",
+    description: "The Sovereign Metaverse - Immersive 3D Worlds",
+    url: "https://vibeland.com",
     color: "#3b82f6",
-    layer: "Intelligence",
   },
   {
     id: "spectrum",
     name: "Spectrum Galactic",
     shortName: "Spectrum",
     description: "Global Reach - Satellite Coverage Extension",
-    url: "https://spectrum-galactic.vercel.app",
+    url: "https://spectrumgalactic.xyz",
     color: "#8b5cf6",
-    layer: "Connectivity",
+  },
+  {
+    id: "pythia",
+    name: "Pythia AI",
+    shortName: "Pythia",
+    description: "Emergent AI - Powered by the Ecosystem",
+    url: "https://pythia-ai.xyz",
+    color: "#6366f1",
   },
 ];
 
@@ -156,12 +159,6 @@ export default function Header() {
                             <p className="text-xs text-[var(--text-muted)] mt-0.5 truncate">
                               {project.description}
                             </p>
-                            <span
-                              className="text-[10px] font-medium mt-1 inline-block"
-                              style={{ color: project.color }}
-                            >
-                              {project.layer}
-                            </span>
                           </div>
                           {project.id !== "vibe" && (
                             <svg
@@ -223,9 +220,9 @@ export default function Header() {
           {/* CTA Button */}
           <div className="flex items-center gap-4">
             <span className="text-sm text-[var(--vibe-green)] font-medium">
-              $0.001/VIBE
+              $0.01/VIBE
             </span>
-            <Link href="/invest" className="btn-primary text-sm">
+            <Link href="/presale" className="btn-primary text-sm">
               Buy Now
             </Link>
           </div>
@@ -288,7 +285,7 @@ export default function Header() {
                               <span className="px-1.5 py-0.5 rounded text-[9px] bg-[var(--status-success-bg)] text-[var(--status-success)]">Current</span>
                             )}
                           </div>
-                          <span className="text-[10px] font-medium" style={{ color: project.color }}>{project.layer}</span>
+                          <p className="text-[10px] text-[var(--text-muted)] truncate">{project.description}</p>
                         </div>
                       </a>
                     ))}
@@ -344,11 +341,11 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/invest"
+              href="/presale"
               onClick={() => setMobileMenuOpen(false)}
               className="block btn-primary text-center mt-4"
             >
-              Buy Now - $0.001
+              Buy Now - $0.01
             </Link>
           </nav>
         </div>

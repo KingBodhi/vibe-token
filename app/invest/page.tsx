@@ -20,13 +20,13 @@ export default function Invest() {
             Buy <span className="text-gradient-gold">VIBE</span> Today
           </h1>
           <p className="text-xl text-[var(--text-secondary)] mb-8">
-            Get in at the ground floor. $0.001 per token.
+            Get in at the ground floor. $0.01 per token.
             Spend on the PowerClub Global Dashboard immediately.
           </p>
           <div className="bg-[var(--dark-card)] border border-[var(--gold)] rounded-2xl p-8 max-w-md mx-auto glow-gold">
-            <div className="text-6xl font-bold text-gradient-gold mb-2">$0.001</div>
+            <div className="text-6xl font-bold text-gradient-gold mb-2">$0.01</div>
             <div className="text-lg text-[var(--text-secondary)] mb-4">per VIBE token</div>
-            <div className="text-sm text-[var(--text-muted)]">1,000 VIBE = $1 USD</div>
+            <div className="text-sm text-[var(--text-muted)]">100 VIBE = $1 USD</div>
           </div>
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function Invest() {
                 </div>
                 <div>
                   <div className="text-sm text-[var(--text-muted)] mb-1">Current Price</div>
-                  <div className="text-2xl font-bold text-[var(--gold)]">$0.001 / VIBE</div>
+                  <div className="text-2xl font-bold text-[var(--gold)]">$0.01 / VIBE</div>
                 </div>
                 <div>
                   <div className="text-sm text-[var(--text-muted)] mb-1">Spend On</div>
@@ -108,29 +108,36 @@ export default function Invest() {
             <div className="card border-t-4 border-t-[var(--gold)]">
               <h3 className="text-xl font-semibold text-[var(--gold)] mb-4">Direct Purchase</h3>
               <p className="text-[var(--text-secondary)] mb-6">
-                Buy VIBE tokens at the current price of $0.001 per token.
+                Buy VIBE tokens at the current price of $0.01 per token.
+                Pay with any stablecoin on any chain.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center gap-2 text-sm text-[var(--text-secondary)]">
                   <span className="text-[var(--gold)]">&#9679;</span>
-                  Ground floor pricing at $0.001
+                  Ground floor pricing at $0.01
                 </li>
                 <li className="flex items-center gap-2 text-sm text-[var(--text-secondary)]">
                   <span className="text-[var(--gold)]">&#9679;</span>
-                  Immediate delivery to your wallet
+                  Pay with USDC, USDT, DAI & more
                 </li>
                 <li className="flex items-center gap-2 text-sm text-[var(--text-secondary)]">
                   <span className="text-[var(--gold)]">&#9679;</span>
                   Spend instantly on PCG Dashboard
                 </li>
               </ul>
+              <Link
+                href="/presale"
+                className="btn-primary block text-center"
+              >
+                Buy with Stablecoins
+              </Link>
               <a
                 href="https://okb-ventures.vercel.app/contact"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary block text-center"
+                className="block text-center text-sm text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors mt-3"
               >
-                Contact to Purchase
+                Or contact OKB Ventures for large purchases
               </a>
             </div>
 
@@ -248,7 +255,7 @@ export default function Invest() {
             <div className="card">
               <h4 className="font-semibold text-[var(--gold)] mb-2">Can I buy VIBE now?</h4>
               <p className="text-[var(--text-secondary)]">
-                Yes! VIBE tokens are available for purchase now at $0.001 per token.
+                Yes! VIBE tokens are available for purchase now at $0.01 per token.
                 Contact us through OKB Ventures to complete your purchase.
               </p>
             </div>
@@ -270,7 +277,7 @@ export default function Invest() {
             </div>
 
             <div className="card">
-              <h4 className="font-semibold text-[var(--gold)] mb-2">Why buy at $0.001?</h4>
+              <h4 className="font-semibold text-[var(--gold)] mb-2">Why buy at $0.01?</h4>
               <p className="text-[var(--text-secondary)]">
                 This is ground floor pricing before the full ecosystem launches. Early buyers get
                 the best price and can start using their tokens immediately on the PCG Dashboard.
@@ -287,18 +294,16 @@ export default function Invest() {
             Buy <span className="text-gradient-gold">VIBE</span> Today
           </h2>
           <p className="text-[var(--text-secondary)] text-lg mb-8">
-            Get in at $0.001 per token. Spend immediately on the PowerClub Global Dashboard.
+            Get in at $0.01 per token. Spend immediately on the PowerClub Global Dashboard.
             Full stack implementation in 30 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://okb-ventures.vercel.app/contact"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/presale"
               className="btn-primary"
             >
               Buy VIBE Now
-            </a>
+            </Link>
             <a
               href="https://powerclubglobal.com"
               target="_blank"

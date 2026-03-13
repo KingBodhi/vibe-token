@@ -18,7 +18,7 @@ export default function Home() {
           {/* Live indicator */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[var(--vibe-green)]/10 border border-[var(--vibe-green)]/30 rounded-full text-[var(--vibe-green)] text-sm mb-8">
             <span className="w-2 h-2 rounded-full bg-[var(--vibe-green)] animate-pulse" />
-            Available Now - $0.001 per VIBE
+            Available Now - $0.01 per VIBE
           </div>
 
           {/* Token visual */}
@@ -34,12 +34,12 @@ export default function Home() {
 
           <p className="text-xl md:text-2xl text-[var(--text-secondary)] max-w-3xl mx-auto mb-8">
             VIBE is the native token of the Alpha Protocol Network.
-            Buy now at $0.001 and spend on the Vibertas Dashboard.
+            Buy now at $0.01 and spend on the Vibertas Dashboard.
             Full stack implementation in 30 days.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/invest" className="btn-primary">
+            <Link href="/presale" className="btn-primary">
               Buy VIBE Now
             </Link>
             <a href="https://vibertas-os.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-secondary">
@@ -61,7 +61,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-gold mb-2">$0.001</div>
+              <div className="text-3xl md:text-4xl font-bold text-gradient-gold mb-2">$0.01</div>
               <div className="text-sm text-[var(--text-muted)]">Current Price</div>
             </div>
             <div className="text-center">
@@ -216,7 +216,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Layer 5 of the <span className="text-gradient-gold">Sovereign Stack</span>
+              Part of the <span className="text-gradient-gold">Sovereign Stack</span>
             </h2>
             <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
               VIBE connects all layers of the Sovereign Stack, enabling value exchange
@@ -224,26 +224,28 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {[
-              { layer: "L6", name: "Spectrum Galactic", desc: "LEO Satellites", color: "#8b5cf6" },
-              { layer: "L5", name: "Pythia AI", desc: "Intelligence Layer", color: "#3b82f6" },
-              { layer: "L4", name: "VIBE Token", desc: "Economics Layer", active: true, color: "#22c55e" },
-              { layer: "L3", name: "Vibertas", desc: "Sovereign OS", color: "#eab308" },
-              { layer: "L2", name: "Omega Wireless", desc: "Hardware Foundation", color: "#f97316" },
-              { layer: "L1", name: "Alpha Protocol", desc: "Protocol Foundation", color: "#dc2626" },
+              { name: "Alpha Protocol", desc: "Protocol Foundation", color: "#dc2626" },
+              { name: "Omega Wireless", desc: "Hardware Foundation", color: "#f97316" },
+              { name: "Vibertas", desc: "Sovereign OS", color: "#eab308" },
+              { name: "VIBE Token", desc: "Economics Layer", active: true, color: "#22c55e" },
+              { name: "VIBELAND", desc: "Sovereign Metaverse", color: "#3b82f6" },
+              { name: "Spectrum Galactic", desc: "LEO Satellites", color: "#8b5cf6" },
+              { name: "Pythia AI", desc: "Intelligence Layer", color: "#6366f1" },
             ].map((item) => (
               <div
-                key={item.layer}
+                key={item.name}
                 className={`p-4 rounded-lg border ${
                   item.active
                     ? "bg-[var(--gold)]/10 border-[var(--gold)] glow-gold"
                     : "bg-[var(--dark-card)] border-[var(--dark-border)]"
                 }`}
               >
-                <div className={`text-xs font-mono mb-1 ${item.active ? "text-[var(--gold)]" : "text-[var(--text-muted)]"}`}>
-                  {item.layer}
-                </div>
+                <div
+                  className="w-2 h-2 rounded-full mb-2"
+                  style={{ background: item.color }}
+                />
                 <div className={`font-semibold ${item.active ? "text-[var(--gold)]" : "text-[var(--text-primary)]"}`}>
                   {item.name}
                 </div>
@@ -262,7 +264,7 @@ export default function Home() {
             Available Now
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Buy VIBE at <span className="text-gradient-gold">$0.001</span>
+            Buy VIBE at <span className="text-gradient-gold">$0.01</span>
           </h2>
           <p className="text-[var(--text-secondary)] text-lg mb-8">
             Get in early at the ground floor price. Spend your VIBE on the Vibertas Dashboard
@@ -272,11 +274,11 @@ export default function Home() {
             <div className="text-sm text-[var(--gold)] mb-4 font-semibold">Current Pricing</div>
             <div className="grid grid-cols-2 gap-6 text-left">
               <div>
-                <div className="text-3xl font-bold text-[var(--gold)]">$0.001</div>
+                <div className="text-3xl font-bold text-[var(--gold)]">$0.01</div>
                 <div className="text-sm text-[var(--text-muted)]">Per VIBE Token</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-[var(--text-primary)]">1,000</div>
+                <div className="text-3xl font-bold text-[var(--text-primary)]">100</div>
                 <div className="text-sm text-[var(--text-muted)]">VIBE per $1</div>
               </div>
             </div>
@@ -287,7 +289,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/invest" className="btn-primary">
+            <Link href="/presale" className="btn-primary">
               Buy VIBE Now
             </Link>
             <a href="https://vibertas-os.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-secondary">
